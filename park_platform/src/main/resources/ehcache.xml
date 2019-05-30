@@ -1,0 +1,28 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+ 
+    <!-- 配置缓存文件夹
+        默认：path="java.io.tmpdir"
+         eternal="true":ture为设置缓存永不过期
+         通过注解当进行增删改时清除缓存，这样就会是同步数据库的缓存了
+    -->
+    <diskStore path="D:\\temp"/>
+ 
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="true"
+            maxElementsOnDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </defaultCache>
+    <cache
+            name="LL"
+            maxElementsInMemory="10000"
+            eternal="true"
+            maxElementsOnDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+ 
+</ehcache>

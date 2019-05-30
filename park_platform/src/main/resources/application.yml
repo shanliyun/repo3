@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    druid:
+      first:
+        url: jdbc:mysql://localhost:3306/park_platform?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+        #url: jdbc:mysql://192.168.10.23:3306/park_platform?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
+      second:
+        url: jdbc:mysql://localhost:3306/issuingcard?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+        #url: jdbc:mysql://192.168.10.23:3306/issuing-card?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
